@@ -6,10 +6,14 @@ import com.movieplatform.movie.models.TransactionData;
 import com.movieplatform.movie.repository.MovieRepository;
 import com.movieplatform.movie.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Service
+@Transactional
 public class MovieServicesImp implements MovieServices {
 
     @Autowired

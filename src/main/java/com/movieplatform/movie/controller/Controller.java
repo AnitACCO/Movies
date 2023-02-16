@@ -33,8 +33,8 @@ public class Controller {
         return this.movieServices.getTransactionDetails(transaction_id);
     }
 
-    @PostMapping("/pay/{movie_id}")
-    private ResponseEntity<TransactionData> saveProduct(@PathVariable int id){
-        return ResponseEntity.ok().body(this.movieServices.postTransactionDetails(id));
+    @PostMapping("/pay/{movie_Id}")
+    private ResponseEntity<TransactionData> saveProduct(@PathVariable int movie_Id){
+        return ResponseEntity.ok().body(this.movieServices.postTransactionDetails(movie_Id));
     }
 }
